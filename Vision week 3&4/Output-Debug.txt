@@ -1,0 +1,32 @@
+﻿'Vision_timer.exe' (Win32): Loaded 'C:\Users\Chanan\Documents\GitHub\Vision-team4\Vision-team4\Vision map\Debug\Vision_timer.exe'. Symbols loaded.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntdll.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel32.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\KernelBase.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\user32.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\gdi32.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\shlwapi.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\GdiPlus.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp120d.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcr120d.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcrt.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\combase.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\rpcrt4.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sspicli.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cryptbase.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sechost.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\bcryptprimitives.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\imm32.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msctf.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\nvinit.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\advapi32.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Program Files (x86)\NVIDIA Corporation\coprocmanager\detoured.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Program Files (x86)\NVIDIA Corporation\coprocmanager\Nvd3d9wrap.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\setupapi.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cfgmgr32.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Program Files (x86)\NVIDIA Corporation\coprocmanager\nvdxgiwrap.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\uxtheme.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\WindowsCodecs.dll'. Cannot find or open the PDB file.
+'Vision_timer.exe' (Win32): Loaded 'C:\Windows\SysWOW64\oleaut32.dll'. Cannot find or open the PDB file.
+The thread 0x1970 has exited with code -1073741510 (0xc000013a).
+The thread 0x1878 has exited with code -1073741510 (0xc000013a).
+The program '[8836] Vision_timer.exe' has exited with code -1073741510 (0xc000013a).
