@@ -11,25 +11,11 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	string inputFileLocation;
-	string outputFileLocation;
-
-	cout << "Please specify the path to the input file: \n";
-
-	cin >> inputFileLocation;
-	
-	cout << "Please specify the path for the output file: \n";
-
-	cin >> outputFileLocation;
-
-	Image img;
-	img.LoadImageFromFile("test.bmp");
+	Image img("test.jpg");
 
 	BlobDetection bd;
 
-	std::list<Blob> blobs = bd.Invoke(img);
-
-	img.SaveImageToFile("new");
+	//std::list<Blob> blobs = bd.Invoke(img);
 
 	return 0;
 }
