@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include <string>
 #include <iostream>
+#include "LicenseLocalizer.h"
 
 using namespace std;
 
@@ -21,8 +22,14 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	cin >> outputFileLocation;
 
+	Image img;
+	img.LoadImageFromFile("test.bmp");
 
+	BlobDetection bd;
 
+	std::list<Blob> blobs = bd.Invoke(img);
+
+	img.SaveImageToFile("new");
 
 	return 0;
 }
