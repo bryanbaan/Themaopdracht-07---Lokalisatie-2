@@ -13,10 +13,10 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	Image img("test.jpg");
 
-	BlobDetection bd;
+	//BlobDetection bd;
 
 	//std::list<Blob> blobs = bd.Invoke(img);
-
+	delete(&img);
 	return 0;
 }
 
