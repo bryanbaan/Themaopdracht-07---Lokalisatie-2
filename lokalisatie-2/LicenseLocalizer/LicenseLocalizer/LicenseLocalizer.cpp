@@ -11,12 +11,13 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Image img("test.jpg");
 
-	//BlobDetection bd;
 
-	//std::list<Blob> blobs = bd.Invoke(img);
-	delete(&img);
+	BlobDetection bd;
+	Image img("HUH.bmp");
+
+	bd.Invoke(img);
+
 	return 0;
 }
 

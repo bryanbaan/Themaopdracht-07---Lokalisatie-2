@@ -15,8 +15,7 @@
 
 class BlobDetection {
 private:
-	int _checkPointListSize;
-	Point _checkPoints[];
+	
 
 public:
 	BlobDetection();
