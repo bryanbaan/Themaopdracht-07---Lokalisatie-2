@@ -56,6 +56,8 @@ public:
 	inline void SetPixelBlue(int x, int y, int value) { pixel[x + (y * width)] |= (value & 0xFF) << 8; }
 	inline void SetPixelAlpha(int x, int y, int value) { pixel[x + (y * width)] |= (value & 0xFF) << 0; }
 
+	inline unsigned int * GetDataPointer() { return pixel; }
+
 };
 
 #endif
