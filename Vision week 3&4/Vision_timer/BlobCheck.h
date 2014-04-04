@@ -3,6 +3,7 @@
 #include "Image.h"
 #include "exectimer.h"
 #include <iostream>
+#include <list>
 
 class BlobCheck {
 private:
@@ -10,7 +11,7 @@ private:
 public:
 	BlobCheck();
 	~BlobCheck();
-	void CheckIfBlobIsLicensePlate(Blob &blobobjects);
+	void CheckIfBlobIsLicensePlate(std::list<blob> &blobobjects);
 };
 
 #endif

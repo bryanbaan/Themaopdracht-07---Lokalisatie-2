@@ -74,6 +74,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BlobCheck.cpp" />
+    <ClCompile Include="BlobLokalizer.cpp" />
     <ClCompile Include="Cluster.cpp" />
     <ClCompile Include="ColorChannelToImage.cpp" />
     <ClCompile Include="Equalize.cpp" />
@@ -87,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlobCheck.h" />
+    <ClInclude Include="BlobLokalizer.h" />
     <ClInclude Include="Cluster.h" />
     <ClInclude Include="ColorChannelToImage.h" />
     <ClInclude Include="Equalize.h" />
