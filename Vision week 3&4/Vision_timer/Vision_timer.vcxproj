@@ -73,30 +73,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Blob.cpp" />
     <ClCompile Include="BlobCheck.cpp" />
-    <ClCompile Include="BlobLokalizer.cpp" />
-    <ClCompile Include="Cluster.cpp" />
-    <ClCompile Include="ColorChannelToImage.cpp" />
-    <ClCompile Include="Equalize.cpp" />
+    <ClCompile Include="BlobDetection.cpp" />
     <ClCompile Include="GrayScale.cpp" />
     <ClCompile Include="Histogram.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Filter.cpp" />
-    <ClCompile Include="noiser.cpp" />
+    <ClCompile Include="Point.cpp" />
     <ClCompile Include="Threshold.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Blob.h" />
     <ClInclude Include="BlobCheck.h" />
-    <ClInclude Include="BlobLokalizer.h" />
-    <ClInclude Include="Cluster.h" />
-    <ClInclude Include="ColorChannelToImage.h" />
+    <ClInclude Include="BlobDetection.h" />
     <ClInclude Include="Equalize.h" />
     <ClInclude Include="GrayScale.h" />
     <ClInclude Include="Histogram.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="Filter.h" />
-    <ClInclude Include="noiser.h" />
+    <ClInclude Include="Point.h" />
     <ClInclude Include="Threshold.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

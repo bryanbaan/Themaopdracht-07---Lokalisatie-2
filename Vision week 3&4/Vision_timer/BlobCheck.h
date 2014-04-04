@@ -4,6 +4,8 @@
 #include "exectimer.h"
 #include <iostream>
 #include <list>
+#include "Blob.h"
+#include "Point.h"
 
 class BlobCheck {
 private:
@@ -11,7 +13,7 @@ private:
 public:
 	BlobCheck();
 	~BlobCheck();
-	void CheckIfBlobIsLicensePlate(std::list<blob> &blobobjects);
+	int* CheckIfBlobIsLicensePlate(std::vector<Blob> &blobobjects, Image &sourceImage);
 };
 
 #endif

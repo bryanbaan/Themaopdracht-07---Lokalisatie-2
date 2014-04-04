@@ -12,6 +12,9 @@
 #include "Cluster.h"
 #include "Threshold.h"
 #include "BlobCheck.h"
+#include "BlobDetection.h"
+#include "Blob.h"
+#include "Point.h"
 
 int main(int argc, char** argv) {
 	/*=========================     Program parameters     =========================*/

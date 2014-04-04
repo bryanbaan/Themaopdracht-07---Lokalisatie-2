@@ -1,4 +1,6 @@
 #include "BlobCheck.h"
+#include <vector>
+#define MINIMALPIXELAMOUNT 500
 //#define redPixel 24
 //#define greenPixel 16
 //#define bluePixel 8
@@ -13,64 +15,58 @@ BlobCheck::~BlobCheck() {
 	delete bt;
 }
 
-void BlobCheck::CheckIfBlobIsLicensePlate(Blob &blobobjects) {
+int* BlobCheck::CheckIfBlobIsLicensePlate(std::vector<Blob> &blobobjects, Image &sourceImage) {
 	bt->reset();
 	bt->start();
+	
+	int* blobArray;
+	int index = 0;
+	int listSize = blobobjects.size();
+	int HEIGHT = sourceImage.GetHeight();
+	int WEIGHT = sourceImage.GetWidth();
+	int PlatePixelAmount = MINIMALPIXELAMOUNT;
 
-	aantalpixelswatkentekenminimaalis = (HEIGHT * WEIGHT / 100)
+	blobArray = (int *)malloc(sizeof(int)* listSize);
 
-	while (allBlobObjects && && boolean = true){
-
+	for (std::vector<Blob>::iterator it = blobobjects.begin(); it != blobobjects.end(); ++it) {
+		int mass = it->getMass();
 		//is aantal pixels groot genoeg om kenteken te zijn
-		if (aantalPixels < aantalpixelswatkentekenminimaalis) {
-			boolean = false
+		if (mass > PlatePixelAmount) {
+			//zo , doe die algoritme met hoeken en pythagoras
+			
+			Point topLeft = it->getCornerPoints()[0];
+			Point topRight = it->getCornerPoints()[1];
+			Point bottomRight = it->getCornerPoints()[2];
+			Point bottomLeft = it->getCornerPoints()[3];
+
+			int pythagorasHorizontal = topRight.getX() - topLeft.getX;
+			int pythagorasVertical = topRight.getY() - topLeft.getY();
+
+			int length = sqrt(pow(pythagorasHorizontal, 2) + pow(pythagorasVertical, 2));
+
+			pythagorasHorizontal = bottomRight.getX() - topRight.getX();
+			pythagorasVertical = bottomRight.getY() - topRight.getY();
+
+			int length2 = sqrt(pow(pythagorasHorizontal, 2) + pow(pythagorasVertical, 2));
+
+			int height;
+			int width;
+			// lengte * lengte2 is nu de oppervlakte van een mogelijk kenteken
+
+			//oppervlakteMogelijkKenteken = lengte*lengte2
+
+			length < length2 ? height = length : width = length;
+
+			if (width >(height*2.5) && width < (height * 5)) {
+				blobArray[index] = 1;
+			}
+			else {
+				blobArray[index] = 0;
+			}
+
+			//lengte / lengte2 moet groter zijn dan 2,5 
 		}
-			//zo ja, doe die algoritme met hoeken en pythagoras
-
-		coordinate1 = pixelLinksboven  // kleinste x, grootste y
-		coordinate2 = pixelrechtsboven // kleinste y, grootste x
-		coordinate3 = pixelrechtsonder // grootste x, kleinste y
-		coordinate4 = pixellinksonder  // grootste y, kleinste x
-
-		aanliggendezijdePythagoros = X.coordinate2 - X.coordinate1;
-		overstaandezijdePythagoros = Y.coordinate1 - Y.coordinate2;
-
-		lengte = wortle(aanliggendezijdePythagorosKwadraat + overstaandezijdePythagorosKwadraat)
-
-		xzijdePythagoros = X.coordinate3 - X.coordinate2;
-		yzijdePythagoros = Y.coordinate3 - Y.coordinate2;
-
-		lengte2 = wortle(xzijdePythagorosKwadraat + yzijdePythagorosKwadraat)
-
-		// lengte * lengte2 is nu de oppervlakte van een mogelijk kenteken
-
-		//oppervlakteMogelijkKenteken = lengte*lengte2
-
-		lengte < lengte2 ? lengteIsHoogteVanMogelijkKenteken : lengteIsBreedteVanMogelijkKenteken
-
-		(breedte >(hoogte*2.5) && breedte < (hoogte * 5)) {blob = mogelijke kandidaat}
-
-		//lengte / lengte2 moet groter zijn dan 2,5 
-		return hoekpuntcoordinaten
-
-
+		blobArray[index] = 0;
+		index++;
 	}
-	/*
-	if (sourceImage.GetWidth() != destinationImage.GetWidth() && sourceImage.GetHeight() != destinationImage.GetHeight()) {
-		std::cout << "Error images are not the same size" << std::endl;
-		return;
-	}
-
-	int grayValue;
-
-	for (int y = sourceImage.GetHeight() - 1; y >= 0; y--) {
-		for (int x = sourceImage.GetWidth() - 1; x >= 0; x--) {
-			grayValue = (int)((sourceImage.GetPixelRed(x, y) * 0.30) + (sourceImage.GetPixelGreen(x, y) * 0.59) + (sourceImage.GetPixelBlue(x, y) * 0.11));
-			destinationImage.SetPixel(x, y, (grayValue << redPixelShift) | (grayValue << greenPixelShift) | (grayValue << bluePixelShift));
-		}
-	}
-
-	bt->stop();
-	std::cout << "Time for the Grayscale function: " << bt->elapsedMicroSeconds() << " Microseconds (" << bt->elapsedMilliSeconds() << "ms)" << std::endl;
-	*/
 }
