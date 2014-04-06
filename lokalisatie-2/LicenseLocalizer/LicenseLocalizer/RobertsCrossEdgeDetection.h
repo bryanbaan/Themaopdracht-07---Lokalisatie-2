@@ -15,7 +15,7 @@ public:
 		int srcHeight = sourceImage.GetHeight();
 		int srcWidth = sourceImage.GetWidth();
 
-		Pixel * sourcePixel = (Pixel*)sourceImage.GetDataPointer();
+		Pixel * sourcePixel = (Pixel*) sourceImage.GetDataPointer();
 		Pixel * pixel = (Pixel *)image.GetDataPointer();
 
 		//The masks
@@ -32,8 +32,8 @@ public:
 				double magX = 0.0;
 				double magY = 0.0;
 
-				for (int ny = -1; ny < 1; ny++) {
-					for (int nx = -1; nx < 1; nx++) {
+				for (int ny = 0; ny < 2; ny++) {
+					for (int nx = 0; nx < 2; nx++) {
 						pos = arrayPos + (ny * srcWidth) + nx;
 
 						magX += sourcePixel[pos].R * kernelX[ny + 1][nx + 1];
