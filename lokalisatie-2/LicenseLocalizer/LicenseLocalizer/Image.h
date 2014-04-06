@@ -17,6 +17,13 @@
 #define bluePixelShift 8
 #define alphaPixelShift 0
 
+struct Pixel {
+	unsigned char A;
+	unsigned char B;
+	unsigned char G;
+	unsigned char R;
+};
+
 class Image {
 private:
 	CImage* image;
