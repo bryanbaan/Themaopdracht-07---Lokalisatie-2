@@ -93,6 +93,7 @@ std::vector<Blob> BlobDetection::Invoke(Image &img) {
 		}
 	}
 	int blobCnt = 0;
+	
 
 	for(int i = 0; i < labelIndex; i++) {
 		if(labelTable[i] == i) {
@@ -100,19 +101,45 @@ std::vector<Blob> BlobDetection::Invoke(Image &img) {
 		}
 	}
 
-	//int* labelToBlob = new int[labelIndex];
-	//for(int x = 0; x < labelIndex; x++) {
-	//	labelToBlob[x] = 0;
-	//}
+	int* labelToBlob = new int[labelIndex];
+	for(int x = 0; x < labelIndex; x++) {
+		labelToBlob[x] = 0;
+	}
 
+	int blobIndex = 1;
+	int tmp = 0;
 
+	for(int x = 0; x < labelIndex; x++) {
+		if(labelTable[x] == x) {
+			labelToBlob[x] = blobIndex;
+		}else {
+			tmp = labelTable[x];
+			while(labelTable[tmp] != tmp) {
+				tmp = labelTable[tmp];
+			}
+			labelToBlob[x] = labelToBlob[tmp];
+		}
+	}
 
+	Blob* blobs = new Blob[blobCnt];
+	for(int x = 0; x < blobCnt; x++) {
+		blobs[x] = Blob();
+	}
+	int blobId = 0;
 
 	for(int yy= 0; yy< height; yy++) {
 		for(int xx =0; xx < width; xx++){ 
 			if(labelMap[yy][xx] > 0) {
-				img.SetPixel(xx,yy, 255 << 24 | 0 << 16 | 0 << 8);
+				blobId = labelToBlob[labelMap[yy][xx]];
+				blobs[blobId].addPixel(xx,yy);
 			}
+		}
+	}
+
+	for(int x = 0; x < blobCnt; x++) {
+		std::vector<Point> points = blobs[x].getPoints();
+		for(it = points.begin(); it != points.end(); it++) {
+			img.SetPixel(it->getX(), it->getY(), 255 << 24 | 0 << 16 | 0 << 8);
 		}
 	}
 

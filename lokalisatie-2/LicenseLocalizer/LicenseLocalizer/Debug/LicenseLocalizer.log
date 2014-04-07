@@ -1,4 +1,4 @@
-﻿Build started 4/7/2014 11:13:30 AM.
+﻿Build started 4/7/2014 11:36:08 AM.
 Project "C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" on node 2 (Build target(s)).
 Project file contains ToolsVersion="12.0". This toolset is unknown or missing. You may be able to resolve this by installing the appropriate .NET Framework for this toolset. Treating the project as if it had ToolsVersion="4.0".
 ClCompile:
@@ -18,4 +18,4 @@ Done Building Project "C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\loka
 
 Build succeeded.
 
-Time Elapsed 00:00:04.18
+Time Elapsed 00:00:04.56
