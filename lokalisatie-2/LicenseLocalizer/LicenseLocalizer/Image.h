@@ -17,6 +17,13 @@
 #define bluePixelShift 8
 #define alphaPixelShift 0
 
+struct Pixel {
+	unsigned char A;
+	unsigned char B;
+	unsigned char G;
+	unsigned char R;
+};
+
 class Image {
 private:
 	CImage* image;
@@ -55,6 +62,8 @@ public:
 	inline void SetPixelGreen(int x, int y, int value) { pixel[x + (y * width)] |= (value & 0xFF) << 16; }
 	inline void SetPixelBlue(int x, int y, int value) { pixel[x + (y * width)] |= (value & 0xFF) << 8; }
 	inline void SetPixelAlpha(int x, int y, int value) { pixel[x + (y * width)] |= (value & 0xFF) << 0; }
+
+	inline unsigned int * GetDataPointer() { return pixel; }
 
 };
 
