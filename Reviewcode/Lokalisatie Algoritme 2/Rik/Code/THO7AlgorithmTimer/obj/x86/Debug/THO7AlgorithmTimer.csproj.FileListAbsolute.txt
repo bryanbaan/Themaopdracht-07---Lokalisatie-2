@@ -1,0 +1,9 @@
+C:\Users\Jeroen\Dropbox\Jaar3\Herkansingen\Themaopdracht 7\Week 2\THO7AlgorithmTimer\obj\x86\Debug\THO7AlgorithmTimerApplication.ImagePreviewForm.resources
+C:\Users\Jeroen\Dropbox\Jaar3\Herkansingen\Themaopdracht 7\Week 2\THO7AlgorithmTimer\obj\x86\Debug\THO7AlgorithmTimerApplication.MainForm.resources
+C:\Users\Jeroen\Dropbox\Jaar3\Herkansingen\Themaopdracht 7\Week 2\THO7AlgorithmTimer\obj\x86\Debug\THO7AlgorithmTimerApplication.Properties.Resources.resources
+C:\Users\Jeroen\Dropbox\Jaar3\Herkansingen\Themaopdracht 7\Week 2\THO7AlgorithmTimer\obj\x86\Debug\THO7AlgorithmTimer.csproj.GenerateResource.Cache
+C:\Users\Jeroen\Dropbox\Jaar3\Herkansingen\Themaopdracht 7\Week 2\THO7AlgorithmTimer\bin\Debug\THO8AlgorithmTimer.exe
+C:\Users\Jeroen\Dropbox\Jaar3\Herkansingen\Themaopdracht 7\Week 2\THO7AlgorithmTimer\bin\Debug\THO8AlgorithmTimer.pdb
+C:\Users\Jeroen\Dropbox\Jaar3\Herkansingen\Themaopdracht 7\Week 2\THO7AlgorithmTimer\obj\x86\Debug\THO8AlgorithmTimer.exe
+C:\Users\Jeroen\Dropbox\Jaar3\Herkansingen\Themaopdracht 7\Week 2\THO7AlgorithmTimer\obj\x86\Debug\THO8AlgorithmTimer.pdb
+C:\Users\Jeroen\Dropbox\Jaar3\Herkansingen\Themaopdracht 7\Week 2\THO7AlgorithmTimer\obj\x86\Debug\THO7AlgorithmTimer.csprojResolveAssemblyReference.cache
