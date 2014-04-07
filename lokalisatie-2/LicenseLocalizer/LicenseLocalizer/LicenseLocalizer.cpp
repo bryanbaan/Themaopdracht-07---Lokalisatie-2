@@ -11,7 +11,7 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-
+	Image img("input.bmp");
 
 	BlobDetection bd;
 	Image img("HUH.bmp");
