@@ -1,6 +1,9 @@
 #ifndef Blob_H
 #define Blob_H
-	
+
+#include <vector>
+#include "Point.h"	
+
 class Blob {
 
 private:
@@ -11,6 +14,8 @@ private:
 
 	int _smallestX;
 	int _biggestX;
+
+	std::vector<Point> _pixels;
 
 public:
 	Blob();
@@ -26,6 +31,8 @@ public:
 
 	int getWidth(){return (_biggestX - _smallestX);};
 	int getHeight(){return (_biggestY - _smallestY);};
+
+	std::vector<Point> getPoints(){return _pixels;}
 
 
 

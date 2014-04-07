@@ -14,7 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 	BlobDetection bd;
-	Image img("HUH.bmp");
+	Image img("wow.bmp");
 
 	bd.Invoke(img);
 

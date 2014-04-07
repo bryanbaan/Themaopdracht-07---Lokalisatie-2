@@ -3,6 +3,10 @@
 
 Blob::Blob() {
 	_pixelCount = 0;
+	_smallestX = -1;
+	_biggestX = -1;
+	_smallestY = -1;
+	_biggestY = -1;
 }
 
 void Blob::addPixel(int x, int y) {
@@ -24,4 +28,5 @@ void Blob::addPixel(int x, int y) {
 
 	_pixelCount++;
 
+	_pixels.insert(_pixels.begin(), Point(y,x));
 }
