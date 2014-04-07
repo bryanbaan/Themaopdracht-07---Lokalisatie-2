@@ -1,3 +1,9 @@
+/*
+*
+*	Author: Mike Schaap
+*/
+
+
 #include "stdafx.h"
 #include "BlobDetection.h"
 #include <iostream>
@@ -5,12 +11,8 @@
 BlobDetection::BlobDetection() {
 }
 
-std::list<Blob> BlobDetection::Invoke(Image &img) {
-	
-	//checkPoints[0] = Point(0, -1);
-	//checkPoints[1] = Point(-1, -1);
-	//checkPoints[2] = Point(-1, 0);
-	//checkPoints[3] = Point(-1, 1);
+std::vector<Blob> BlobDetection::Invoke(Image &img) {
+	std::vector<Blob> blobList;
 
 	std::vector<Point> checkPoints;
 	std::vector<Point>::iterator it = checkPoints.begin();
@@ -46,6 +48,7 @@ std::list<Blob> BlobDetection::Invoke(Image &img) {
 	int labelIndex = 0;
 
 	int index = 0;
+	int neighboorLabelsFound = 0;
 	
 	for(int y = 0; y < height; y++) {
 		for(int x = 0; x < width; x++) {
@@ -53,20 +56,22 @@ std::list<Blob> BlobDetection::Invoke(Image &img) {
 			index = 0;
 			if(img.GetPixelBlue(x,y) == 255) {
 				for(it = checkPoints.begin(); it != checkPoints.end(); it++) {
-					tmpX = it->getX();
-					tmpY = it->getY();
+					tmpX =  x + it->getX();
+					tmpY =  y + it->getY();
 					if(tmpX > 0 && tmpY > 0){
 						neighbours[index] = labelMap[tmpY][tmpX];
-						if(neighbours[index] > 0 && (neighbours[index] < smallestNeighbourLabel || smallestNeighbourLabel == 0)) {
-							smallestNeighbourLabel = neighbours[index];
+						if(neighbours[index] > 0 ){
+							neighboorLabelsFound++;
+							if(smallestNeighbourLabel == 0 || neighbours[index] < smallestNeighbourLabel) {
+								smallestNeighbourLabel = neighbours[index];
+							}
 						}
 					} else {
 						neighbours[index] = 0;
 					}
 				}
 
-				//We now have all labels surrounding us. Let's check if we have any existing labels nearby
-				if(smallestNeighbourLabel > 0) {
+				if(neighboorLabelsFound > 1) {
 					for(int i = 0; i < maxNeighbours; i++) {
 						if(neighbours[i] > 0) {
 							if(neighbours[i] > smallestNeighbourLabel) {
@@ -75,19 +80,33 @@ std::list<Blob> BlobDetection::Invoke(Image &img) {
 						}
 					}
 					labelMap[y][x] = smallestNeighbourLabel;
-				} else {
+				} else if (neighboorLabelsFound == 1) {
+					labelMap[y][x] = smallestNeighbourLabel;
+				}
+				else {
 					labelMap[y][x] = labelIndex;
 					labelTable[labelIndex] = labelIndex;
 					labelIndex++;
 				}
-
 			}
+			neighboorLabelsFound = 0;
+		}
+	}
+	int blobCnt = 0;
+
+	for(int i = 0; i < labelIndex; i++) {
+		if(labelTable[i] == i) {
+			blobCnt++;
 		}
 	}
 
-	for(int v = 0; v < labelIndex; v++) {
-		std::cout << labelTable[v] << "\n";
-	}
+	//int* labelToBlob = new int[labelIndex];
+	//for(int x = 0; x < labelIndex; x++) {
+	//	labelToBlob[x] = 0;
+	//}
+
+
+
 
 	for(int yy= 0; yy< height; yy++) {
 		for(int xx =0; xx < width; xx++){ 
@@ -204,7 +223,7 @@ std::list<Blob> BlobDetection::Invoke(Image &img) {
 	*/
 
 	//newImg.SaveImageToFile("ppp_");
-		std::list<Blob> blobList;
+
 	img.SaveImageToFile("changed");
 	return blobList;
 

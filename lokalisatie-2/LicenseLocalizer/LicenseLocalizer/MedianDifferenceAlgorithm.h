@@ -1,7 +1,10 @@
+/*
+*
+*	Author: Mitchell werensteijn
+*/
+
 #ifndef MEDIANDIFFERENCEALGORITHM_H
 #define MEDIANDIFFERENCEALGORITHM_H
-
-// Mitchell Werensteijn
 
 #include "Image.h"
 

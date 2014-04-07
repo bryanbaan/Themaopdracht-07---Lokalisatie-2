@@ -10,6 +10,11 @@
 #define Image_H
 #include <atlimage.h>
 #include <string>
+/*
+*
+*	Author: Mike Schaap
+*/
+
 #include <iostream>
 //Shift values
 #define redPixelShift 24

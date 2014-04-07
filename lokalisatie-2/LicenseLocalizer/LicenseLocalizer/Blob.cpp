@@ -1,3 +1,8 @@
+/*
+*
+*	Author: Mike Schaap
+*/
+
 #include "stdafx.h"
 #include "Blob.h"
 
@@ -29,4 +34,15 @@ void Blob::addPixel(int x, int y) {
 	_pixelCount++;
 
 	_pixels.insert(_pixels.begin(), Point(y,x));
+}
+
+Point* Blob::getCornerPoints() {
+	Point *cornerPoints = new Point[4];
+
+	cornerPoints[0] = Point(_smallestY, _smallestX);
+	cornerPoints[1] = Point(_smallestY, _biggestX);
+	cornerPoints[2] = Point(_biggestY, _smallestX);
+	cornerPoints[3] = Point(_biggestY, _biggestX);
+
+	return cornerPoints;
 }

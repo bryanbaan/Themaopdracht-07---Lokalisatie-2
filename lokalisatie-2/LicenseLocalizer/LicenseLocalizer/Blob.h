@@ -1,3 +1,8 @@
+/*
+*
+*	Author: Mike Schaap
+*/
+
 #ifndef Blob_H
 #define Blob_H
 
@@ -27,7 +32,7 @@ public:
 	int getActualBlobPercentage(){ return (_pixelCount / getGroundSurface() * 100);};
 	int getMass(){return _pixelCount;};
 
-	int* getCornerPoints();
+	Point* getCornerPoints();
 
 	int getWidth(){return (_biggestX - _smallestX);};
 	int getHeight(){return (_biggestY - _smallestY);};

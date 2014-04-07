@@ -1,3 +1,8 @@
+/*
+*
+*	Author: Mike Schaap
+*/
+
 #ifndef Point_H
 #define Point_H
 

@@ -1,3 +1,8 @@
+/*
+*
+*	Author: Mike Schaap
+*/
+
 #include "stdafx.h"
 #include "Point.h"
 
