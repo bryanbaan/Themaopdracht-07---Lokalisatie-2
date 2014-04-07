@@ -45,16 +45,19 @@ std::vector<Blob> BlobDetection::Invoke(Image &img) {
 	int maxNeighbours = checkPoints.size();
 	int* neighbours = new int[maxNeighbours];
 	int smallestNeighbourLabel = 0;
-	int labelIndex = 0;
+	int labelIndex = 1;
 
 	int index = 0;
 	int neighboorLabelsFound = 0;
+
+	int blobCnt = 0;
 	
 	for(int y = 0; y < height; y++) {
 		for(int x = 0; x < width; x++) {
 			//Only check blue. Saves time and if blue = 0 it's black, if blue is 255 it's white. Simple as that
 			index = 0;
-			if(img.GetPixelBlue(x,y) == 255) {
+			int color = img.GetPixelRed(x,y);
+			if(color > 0) {
 				for(it = checkPoints.begin(); it != checkPoints.end(); it++) {
 					tmpX =  x + it->getX();
 					tmpY =  y + it->getY();
@@ -69,6 +72,7 @@ std::vector<Blob> BlobDetection::Invoke(Image &img) {
 					} else {
 						neighbours[index] = 0;
 					}
+					index++;
 				}
 
 				if(neighboorLabelsFound > 1) {
@@ -90,16 +94,17 @@ std::vector<Blob> BlobDetection::Invoke(Image &img) {
 				}
 			}
 			neighboorLabelsFound = 0;
+			smallestNeighbourLabel = 0;
 		}
 	}
-	int blobCnt = 0;
-	
 
-	for(int i = 0; i < labelIndex; i++) {
-		if(labelTable[i] == i) {
+	for(int x = 0; x < labelIndex; x++) {
+		if(labelTable[x] == x) {
 			blobCnt++;
 		}
+
 	}
+
 
 	int* labelToBlob = new int[labelIndex];
 	for(int x = 0; x < labelIndex; x++) {
@@ -111,7 +116,7 @@ std::vector<Blob> BlobDetection::Invoke(Image &img) {
 
 	for(int x = 0; x < labelIndex; x++) {
 		if(labelTable[x] == x) {
-			labelToBlob[x] = blobIndex;
+			labelToBlob[x] = blobIndex++;
 		}else {
 			tmp = labelTable[x];
 			while(labelTable[tmp] != tmp) {
@@ -121,135 +126,65 @@ std::vector<Blob> BlobDetection::Invoke(Image &img) {
 		}
 	}
 
-	Blob* blobs = new Blob[blobCnt];
-	for(int x = 0; x < blobCnt; x++) {
-		blobs[x] = Blob();
-	}
-	int blobId = 0;
-
-	for(int yy= 0; yy< height; yy++) {
-		for(int xx =0; xx < width; xx++){ 
-			if(labelMap[yy][xx] > 0) {
-				blobId = labelToBlob[labelMap[yy][xx]];
-				blobs[blobId].addPixel(xx,yy);
-			}
-		}
+	
+	int **blobArray = new int*[blobCnt + 2];
+	for(int i = 0; i < blobCnt + 2; i++) {
+		blobArray[i] = new int[5];
+		blobArray[i][0] = 0; //mass
+		blobArray[i][1] = width; //min x
+		blobArray[i][2] = 0; //max x
+		blobArray[i][3] = height; //min y
+		blobArray[i][4] = 0; //max y
 	}
 
-	for(int x = 0; x < blobCnt; x++) {
-		std::vector<Point> points = blobs[x].getPoints();
-		for(it = points.begin(); it != points.end(); it++) {
-			img.SetPixel(it->getX(), it->getY(), 255 << 24 | 0 << 16 | 0 << 8);
-		}
-	}
-
-	img.SaveImageToFile("changed");
-
-	/*
-
-
-	int labelTableSize = height* width;
-
-	int *labelTable = new int[labelTableSize];
-
-	int labelIndex = 0;
-
-
-	bool neighbourFound = false;
-	int smallestNeighbourLabel = 0;
-
-	for(int y = 0; y< height; y++) {
+	int i  = 0;
+	int ID = 0;
+	for(int y = 0; y < height; y++) {
 		for(int x = 0; x < width; x++) {
-			if(img.GetPixelBlue(x,y) == 255 && img.GetPixelGreen(x,y) == 255 && img.GetPixelRed(x,y) == 255) {
-
-
-				//For every pixel check pixels around it.
-				std::vector<int> foundLabels;
-
-				for(int listIndex = 0; listIndex < 4; listIndex++) {
-					int _x = x + _checkPoints[listIndex].getX();
-					int _y = y + _checkPoints[listIndex].getY();
-					if(_x > 0 && _y > 0 && ary[_y][_x] > 0) {
-						neighbourFound = true;
-						foundLabels.insert(foundLabels.begin(), ary[_y][_x]);
-					}
+			i = labelMap[y][x];
+			if(i > 0 ) {
+				ID = labelToBlob[i];
+				blobArray[ID][0]++;
+				if(x < blobArray[ID][1]) {
+					blobArray[ID][1] = x;
 				}
-				if(neighbourFound == false) {
-					labelTable[labelIndex] = labelIndex;
-					ary[y][x] = labelIndex;
-					labelIndex++;
-				} else {
-					for(std::vector<int>::iterator it = foundLabels.begin(); it != foundLabels.end(); ++it) {
-						if(*it < smallestNeighbourLabel || smallestNeighbourLabel == 0) {
-							smallestNeighbourLabel = *it;
-						}
-					}
-					for(std::vector<int>::iterator it = foundLabels.begin(); it != foundLabels.end(); ++it) {
-						if(*it != smallestNeighbourLabel) {
-							labelTable[*it] = smallestNeighbourLabel;
-						}
-					}
-					ary[y][x] = smallestNeighbourLabel;
+				if(x > blobArray[ID][2]){
+					blobArray[ID][2] = x;
 				}
-				neighbourFound = false;
-				smallestNeighbourLabel = 0;
+				if(y < blobArray[ID][3]) {
+					blobArray[ID][3] = y;
+				}
+				if(y > blobArray[ID][4]) {
+					blobArray[ID][4] = y; 
+				}
 			}
 		}
 	}
 
-	int blobIndex = 0;
-
-	int* labelToBlob = new int[labelIndex];
-
-	int added = 0;
-
-	for(int li = 0; li < labelIndex; li++) {
-		if(labelTable[li] != li) {
-			int tmpIndex = labelTable[li];
-			while(tmpIndex != labelTable[li]) {
-				tmpIndex = labelTable[tmpIndex];
-			}
-			labelToBlob[li] = tmpIndex;
-			added++;
-		} else {
-			labelToBlob[li] = blobIndex++;
+	for(int x = 0; x < blobCnt +2; x++) {
+		if(blobArray[x][0] > 0) {
+			blobList.insert(blobList.begin(), Blob(blobArray[x][0], blobArray[x][3], blobArray[x][4], blobArray[x][1], blobArray[x][2]));
 		}
 	}
 
-	Blob *blobArray = new Blob[blobIndex];
+	Blob ls;
 
-	for(int l = 0; l < blobIndex; l++) {
-		blobArray[l] = Blob();
+	for(std::vector<Blob>::iterator ix = blobList.begin(); ix != blobList.end(); ix++) {
+
+		if(ix->getMass() > 10000) {
+			ls = *ix;
+		}
 	}
 
-	for(int yy = 0; yy < height-1; yy++) {
-		for(int xx = 0; xx < width-1; xx++) {
-			if(ary[yy][xx] > 0) {
-				int ui = labelToBlob[ary[yy][xx]];
-				if(ui < blobIndex) {
-					blobArray[ui].addPixel(yy,xx);
-				} 
+	for( int yy = 0; yy < height; yy++) {
+		for(int xx = 0; xx < width; xx++) {
+			if(yy < ls._smallestY || yy > ls._biggestY || xx < ls._smallestX || xx > ls._biggestX ) {
+					img.SetPixel(xx,yy, 0 <<24 | 0 << 16 | 0 << 8);
 			}
 		}
 	}
 
-	std::vector<Blob> potentialBlobs;
 
-	for(int h = 0; h < blobIndex; h++ ) {
-		if(blobArray[h].getMass() > 9000) {
-			potentialBlobs.insert(potentialBlobs.begin(), blobArray[h]);
-		}
-	}
-
-	std::vector<Point> points = potentialBlobs[0].getPoints();
-
-	for(std::vector<Point>::iterator it = points.begin(); it != points.end(); ++it) {
-		img.SetPixel(it->getX(), it->getY(), 0 << 24 | 255 << 16| 0 << 8);
-	}
-
-	*/
-
-	//newImg.SaveImageToFile("ppp_");
 
 	img.SaveImageToFile("changed");
 	return blobList;

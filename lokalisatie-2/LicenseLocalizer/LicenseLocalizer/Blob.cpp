@@ -14,6 +14,14 @@ Blob::Blob() {
 	_biggestY = -1;
 }
 
+Blob::Blob(int mass, int minY, int maxY, int minX, int maxX)  {
+	_pixelCount = mass;
+	_smallestX = minX;
+	_biggestX = maxX;
+	_smallestY = minY;
+	_biggestY = maxY;
+}
+
 void Blob::addPixel(int x, int y) {
 	if(x < _smallestX || _smallestX == -1) {
 		_smallestX = x;

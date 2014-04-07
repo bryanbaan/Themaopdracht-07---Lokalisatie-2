@@ -14,16 +14,13 @@ class Blob {
 private:
 	int _pixelCount;
 
-	int _smallestY;
-	int _biggestY;
 
-	int _smallestX;
-	int _biggestX;
 
 	std::vector<Point> _pixels;
 
 public:
 	Blob();
+	Blob(int mass, int minY, int maxY, int minX, int maxX);
     void addPixel(int x, int y);
 	void removePixel(int x, int y);
 
@@ -39,6 +36,11 @@ public:
 
 	std::vector<Point> getPoints(){return _pixels;}
 
+	int _smallestY;
+	int _biggestY;
+
+	int _smallestX;
+	int _biggestX;
 
 
 };
