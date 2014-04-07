@@ -1,3 +1,8 @@
+/*
+*
+*	Author: Mike Schaap
+*/
+
 #ifndef BlobDetection_H
 #define BlobDetection_H
 
@@ -19,7 +24,7 @@ private:
 
 public:
 	BlobDetection();
-	std::list<Blob> Invoke(Image &img);
+	std::vector<Blob> Invoke(Image &img);
 };
 
 #endif

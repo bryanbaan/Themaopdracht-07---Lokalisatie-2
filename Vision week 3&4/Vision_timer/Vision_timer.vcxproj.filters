@@ -24,28 +24,25 @@
     <ClCompile Include="GrayScale.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Equalize.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Histogram.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="noiser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Threshold.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ColorChannelToImage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Filter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Cluster.cpp">
+    <ClCompile Include="BlobCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BlobCheck.cpp">
+    <ClCompile Include="Blob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BlobDetection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,22 +59,22 @@
     <ClInclude Include="Histogram.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="noiser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Threshold.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ColorChannelToImage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Filter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cluster.h">
+    <ClInclude Include="BlobCheck.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BlobCheck.h">
+    <ClInclude Include="Blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlobDetection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
