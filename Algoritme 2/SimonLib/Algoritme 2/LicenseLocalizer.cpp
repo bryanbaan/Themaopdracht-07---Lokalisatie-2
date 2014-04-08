@@ -1,6 +1,7 @@
 #include "LicenseLocalizer.h"
 #include "Algorithms\YellowColorFilter.h"
 #include "Algorithms\BinarizeImage.h"
+#include "Algorithms\IntensityHistogram.h"
 #include "Algorithms\HighPassFilter.h"
 
 LicensePosition LicenseLocalizer::getLicensePlatePosition(ImageRGB & image) {
@@ -13,8 +14,8 @@ LicensePosition LicenseLocalizer::getLicensePlatePosition(ImageRGB & image) {
 	BinarizeImage imageBinarizer;
 	imageBinarizer.binarizeImage(image);
 
-	//Histogram histogram(img);
-	//histogram.SaveToCSV("output.csv");
+	IntensityHistogram intensityHistogram;
+	intensityHistogram.getLicensePosition(image, true);
 
 	saveImg(image, "output.jpg");
 

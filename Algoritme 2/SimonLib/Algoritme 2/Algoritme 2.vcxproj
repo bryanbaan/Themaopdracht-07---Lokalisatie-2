@@ -81,6 +81,7 @@
     <ClCompile Include="Algorithms\BinarizeImage.cpp" />
     <ClCompile Include="Algorithms\GrayscaleImage.cpp" />
     <ClCompile Include="Algorithms\HighPassFilter.cpp" />
+    <ClCompile Include="Algorithms\IntensityHistogram.cpp" />
     <ClCompile Include="Algorithms\YellowColorFilter.cpp" />
     <ClCompile Include="LicenseLocalizer.cpp" />
     <ClCompile Include="Main.cpp" />

@@ -36,6 +36,9 @@
     <ClCompile Include="Algorithms\YellowColorFilter.cpp">
       <Filter>Source Files\Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="Algorithms\IntensityHistogram.cpp">
+      <Filter>Source Files\Algorithms</Filter>
+    </ClCompile>
     <ClCompile Include="Algorithms\HighPassFilter.cpp">
       <Filter>Source Files\Algorithms</Filter>
     </ClCompile>
