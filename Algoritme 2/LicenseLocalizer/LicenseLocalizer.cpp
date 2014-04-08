@@ -20,7 +20,7 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Image img("kenteken.jpg");
+	Image img("license_plate_10.jpg");
 	Threshold threshold;
 	
 	//DynamicMedian median(3);
