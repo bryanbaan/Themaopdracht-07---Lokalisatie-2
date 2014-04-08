@@ -24,7 +24,7 @@ private:
 
 public:
 	BlobDetection();
-	std::vector<Blob> Invoke(Image &img);
+	std::vector<Blob> Invoke(Image &img, int minBlobSize);
 };
 
 #endif
