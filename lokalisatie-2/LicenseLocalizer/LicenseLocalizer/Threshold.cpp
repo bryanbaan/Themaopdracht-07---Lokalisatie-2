@@ -65,7 +65,7 @@ void Threshold::doAlgorithm(Image &image) {
 		RGB2HSV(r, g, b, hue, saturtation, value);
 
 		// If the color is yellow.
-		if (hue >= 30 && hue <= 55 && saturtation >= 0.85) {
+		if (hue >= 30 && hue <= 58 && saturtation >= 0.65) {
 			// If the color is within our yellow range, make the output pixel white.
 			destDataPtr[i] = ~0;
 		} else {

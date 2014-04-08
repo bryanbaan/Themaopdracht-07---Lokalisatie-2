@@ -23,7 +23,7 @@ std::vector<Blob> BlobDetection::Invoke(Image &img, int minBlobSize) {
 		labelMap[i] = std::vector<int>(width);
 	}
 
-	int maxLabels = height * width / 2;
+	int maxLabels = height * width;
 
 	std::vector<int> labelTable(maxLabels); 
 
@@ -108,8 +108,8 @@ std::vector<Blob> BlobDetection::Invoke(Image &img, int minBlobSize) {
 
 	for (int y = 0; y < height; y++) {
 		for (int x = 0; x < width; x++) {
-			if (labelTable[labelMap[y][x]] == biggestlabel) {
-				//img.SetPixel(x, y, 255 << 24 | 0 << 16 | 0 << 8);
+			if (labelCount[labelTable[labelMap[y][x]]] > minBlobSize) {
+				img.SetPixel(x, y, 255 << 24 | 0 << 16 | 0 << 8);
 			}
 		}
 	}

@@ -17,27 +17,31 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	string inputFile;
+	int test = 1;
 
-	cout << "Please specify input file:" << "\n";
-	cin >> inputFile;
+	//cout << "Please specify input file:" << "\n";
+	//cin >> inputFile;
 
-	Image inputImage(inputFile);
-	Image original(inputImage);
-	Threshold th;
-	BlobDetection bd;
-	BlobCheck bc;
-
-	//Perform Threshold
+	inputFile = "license_plate_";
+	//stringstream ss;
 	clock_t start = clock();
-	th.doAlgorithm(inputImage);
+	for (test = 1; test <= 18; test++) {
+		string final_plate =  inputFile + to_string(test) + ".jpg";
+		//std::cout << final_plate << std::endl;
+		Image inputImage(final_plate);
+		Image original(inputImage);
+		Threshold th;
+		BlobDetection bd;
 
-	
-	bd.Invoke(inputImage, 500);
+		//Perform Threshold
+		th.doAlgorithm(inputImage);
+		bd.Invoke(inputImage, (inputImage.GetHeight() * inputImage.GetWidth()) * 0.002);
+
+		inputImage.SaveImageToFile("v1");		
+	}
 	clock_t end = clock();
 	std::cout << "blob detection took: " << ((end - start) / (double)CLOCKS_PER_SEC) << "\n";
-
-	//std::vector<Blob> validBlobs = bc.CheckIfBlobIsLicensePlate(blobsFound, inputImage);
-
+	std::cin.get();
 	return 0;
 }
 
