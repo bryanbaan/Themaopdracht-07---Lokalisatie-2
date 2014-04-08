@@ -1,32 +1,10 @@
-﻿Build started 4/7/2014 2:05:56 PM.
-Project "C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" on node 2 (Rebuild target(s)).
-Project file contains ToolsVersion="12.0". This toolset is unknown or missing. You may be able to resolve this by installing the appropriate .NET Framework for this toolset. Treating the project as if it had ToolsVersion="4.0".
+﻿Build started 4/8/2014 12:41:28 PM.
+Project "C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" on node 2 (Build target(s)).
 ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\LicenseLocalizer.pch.codeanalysis" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\stdafx.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet stdafx.cpp
-  stdafx.cpp
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch.codeanalysis" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\BlobCheck.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet BlobCheck.cpp
-  BlobCheck.cpp
-c:\licenselocalizer\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\blobcheck.cpp(47): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-c:\licenselocalizer\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\blobcheck.cpp(52): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch.codeanalysis" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\BlobDetection.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet BlobDetection.cpp
-  BlobDetection.cpp
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch.codeanalysis" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\Blob.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet Blob.cpp
-  Blob.cpp
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch.codeanalysis" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\Image.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet Image.cpp
-  Image.cpp
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch.codeanalysis" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\LicenseLocalizer.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet LicenseLocalizer.cpp
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt BlobDetection.cpp LicenseLocalizer.cpp
   LicenseLocalizer.cpp
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch.codeanalysis" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\Point.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet Point.cpp
-  Point.cpp
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch.codeanalysis" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\Threshold.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet Threshold.cpp
-  Threshold.cpp
-c:\licenselocalizer\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-c:\licenselocalizer\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(91): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-c:\licenselocalizer\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(96): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-c:\licenselocalizer\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(99): warning C4305: '=' : truncation from 'unsigned int' to 'float'
-c:\licenselocalizer\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(106): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-c:\licenselocalizer\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(110): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-c:\licenselocalizer\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(113): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+  BlobDetection.cpp
+  Generating Code...
 Link:
   C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.lib" /MACHINE:X86 Debug\BlobCheck.obj
   Debug\BlobDetection.obj
@@ -37,9 +15,8 @@ Link:
   Debug\stdafx.obj
   Debug\Threshold.obj
   LicenseLocalizer.vcxproj -> C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.exe
-blobcheck.cpp(62): warning : C6001: Using uninitialized memory 'height'.
-Done Building Project "C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" (Rebuild target(s)).
+Done Building Project "C:\LicenseLocalizer\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:02:47.98
+Time Elapsed 00:00:12.59
