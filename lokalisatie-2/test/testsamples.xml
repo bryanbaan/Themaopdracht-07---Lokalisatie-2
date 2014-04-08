@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsamples>
+	<image filename="license_plate_1.jpg">
+		<license_plate>
+			<location>
+				<upperleft x="190" y="44" />
+				<upperright x="1482" y="10"/>
+				<lowerleft x="249" y="249"/>
+				<lowerright x="1434" y="220" />
+			</location>
+			<text>14-JJL-5</text>
+		</license_plate>
+	</image>
+
+	<image filename="license_plate_2.jpg">
+		<license_plate>
+			<location>
+				<upperleft x="624" y="697" />
+				<upperright x="996" y="706"/>
+				<lowerleft x="624" y="772"/>
+				<lowerright x="994" y="779" />
+			</location>
+			<text>44-SV-XK</text>
+		</license_plate>
+	</image>
+
+	<image filename="license_plate_3.jpg">
+		<license_plate>
+			<location>
+				<upperleft x="318" y="354" />
+				<upperright x="560" y="345"/>
+				<lowerleft x="331" y="421"/>
+				<lowerright x="564" y="411" />
+			</location>
+			<text>39-FF-HP</text>
+		</license_plate>
+  </image>
+  
+	<image filename="license_plate_4.jpg">
+		<license_plate>
+			<location>
+				<upperleft x="912" y="582" />
+				<upperright x="1085" y="580"/>
+				<lowerleft x="914" y="620"/>
+				<lowerright x="1088" y="616" />
+			</location>
+			<text>86-LHS-1</text>
+		</license_plate>
+	</image>
+		
+	<image filename="license_plate_5.jpg">	
+		<license_plate>
+			<location>
+				<upperleft x="196" y="281" />
+				<upperright x="382" y="282"/>
+				<lowerleft x="196" y="316"/>
+				<lowerright x="382" y="319" />
+			</location>
+			<text>98-LZS-3</text>
+		</license_plate>
+	</image>
+
+	<image filename="license_plate_6.jpg">	
+		<license_plate>
+			<location>
+				<upperleft x="1278" y="1477" />
+				<upperright x="2243" y="1317"/>
+				<lowerleft x="1275" y="1688"/>
+				<lowerright x="2233" y="1519" />
+			</location>
+			<text>CD-56-81</text>
+		</license_plate>
+	</image>
+		
+	<image filename="license_plate_7.jpg">	
+		<license_plate>
+			<location>
+				<upperleft x="319" y="385" />
+				<upperright x="1206" y="361"/>
+				<lowerleft x="329" y="599"/>
+				<lowerright x="1196" y="544" />
+			</location>
+			<text>37-GK-SN</text>
+		</license_plate>
+	</image>
+
+	<image filename="license_plate_8.jpg">
+		<license_plate>
+			<location>
+				<upperleft x="1726" y="1520" />
+				<upperright x="2563" y="1440"/>
+				<lowerleft x="1742" y="1704"/>
+				<lowerright x="2577" y="1622" />
+			</location>
+			<text>50-KKG-7</text>
+		</license_plate>
+	</image>
+
+	<image filename="license_plate_9.jpg">
+		<license_plate>
+			<location>
+				<upperleft x="15" y="207" />
+				<upperright x="708" y="112"/>
+				<lowerleft x="45" y="385"/>
+				<lowerright x="696" y="234" />
+			</location>
+			<text>41-LS-TP</text>
+		</license_plate>
+	</image>
+
+	<image filename="license_plate_10.jpg">
+		<license_plate>
+			<location>
+				<upperleft x="614" y="806" />
+				<upperright x="1870" y="775"/>
+				<lowerleft x="650" y="990"/>
+				<lowerright x="1848" y="966" />
+			</location>
+			<text>92-GGL-5</text>
+		</license_plate>
+	</image>
+
+	<image filename="license_plate_11.jpg">	
+		<license_plate>
+			<location>
+				<upperleft x="657" y="1327" />
+				<upperright x="1002" y="1308"/>
+				<lowerleft x="664" y="1427"/>
+				<lowerright x="1000" y="1405" />
+			</location>
+			<text>66-RRR-4</text>
+		</license_plate>
+	</image>
+</testsamples>
