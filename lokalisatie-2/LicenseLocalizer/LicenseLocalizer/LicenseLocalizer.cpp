@@ -9,6 +9,7 @@
 
 #include "stdafx.h"
 #include "LicenseLocalizer.h"
+#include <ctime>
 
 using namespace std;
 
@@ -27,33 +28,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	BlobCheck bc;
 
 	//Perform Threshold
+	clock_t start = clock();
 	th.doAlgorithm(inputImage);
 
-	std::vector<Blob> blobsFound = bd.Invoke(inputImage);
+	
+	bd.Invoke(inputImage, 500);
+	clock_t end = clock();
+	std::cout << "blob detection took: " << ((end - start) / (double)CLOCKS_PER_SEC) << "\n";
 
 	//std::vector<Blob> validBlobs = bc.CheckIfBlobIsLicensePlate(blobsFound, inputImage);
-
-	//iterate over bloblist and give all blobs a blue color
-
-
-	//remove all created objects from the memory
-	delete &inputImage;
-	delete &original;
-	delete &th;
-	delete &bd;
-	delete &bc;
-
-	for (std::vector<Blob>::iterator it = blobsFound.begin(); it != blobsFound.end(); ++it) {
-		delete &it;
-	}
-	
-	delete &blobsFound;
-
-	//for (std::vector<Blob>::iterator it = validBlobs.begin(); it != validBlobs.end(); ++it) {
-	//	delete &it;
-	//}
-
-	//delete &validBlobs;
 
 	return 0;
 }

@@ -73,77 +73,46 @@ std::vector<Blob> BlobDetection::Invoke(Image &img, int minBlobSize) {
 
 			}
 		}
-	}	
-
-	for(int x = 1; x < labelIndex; x++) {
-		if(labelTable[x] == x) {
-			blobCnt++;
-		}
 	}
 
+	std::vector<int> labelCount(labelIndex);
 
-	int* labelToBlob = new int[labelIndex];
-	for(int x = 0; x < labelIndex; x++) {
-		labelToBlob[x] = 0;
-	}
-
-	int blobIndex = 1;
-	int tmp = 0;
-
-	for(int x = 0; x < labelIndex; x++) {
-		if(labelTable[x] == x) {
-			labelToBlob[x] = blobIndex++;
-		}else {
-			tmp = labelTable[x];
-			while(labelTable[tmp] != tmp) {
-				tmp = labelTable[tmp];
+	int tmp1;
+	for(int i = 0; i < labelIndex; i++) {
+		if (labelTable[i] != i) {
+			tmp1 = labelTable[i];
+			while (labelTable[tmp1] != tmp1) {
+				tmp1 = labelTable[tmp1];
 			}
-			labelToBlob[x] = labelToBlob[tmp];
+			labelTable[i] = labelTable[tmp1];
 		}
 	}
 
-	
-	int **blobArray = new int*[blobCnt + 2];
-	for(int i = 0; i < blobCnt + 2; i++) {
-		blobArray[i] = new int[5];
-		blobArray[i][0] = 0; //mass
-		blobArray[i][1] = width; //min x
-		blobArray[i][2] = 0; //max x
-		blobArray[i][3] = height; //min y
-		blobArray[i][4] = 0; //max y
-	}
-
-
-
-	int i  = 0;
-	int ID = 0;
-	for(int y = 0; y < height; y++) {
-		for(int x = 0; x < width; x++) {
-			i = labelMap[y][x];
-			if(i > 0 ) {
-				ID = labelToBlob[i];
-				blobArray[ID][0]++;
-				if(x < blobArray[ID][1]) {
-					blobArray[ID][1] = x;
-				}
-				if(x > blobArray[ID][2]){
-					blobArray[ID][2] = x;
-				}
-				if(y < blobArray[ID][3]) {
-					blobArray[ID][3] = y;
-				}
-				if(y > blobArray[ID][4]) {
-					blobArray[ID][4] = y; 
-				}
+	for (int y = 0; y < height; y++) {
+		for (int x = 0; x < width; x++) {
+			if (labelMap[y][x] > 0) {
+				labelCount[labelTable[labelMap[y][x]]]++;
 			}
 		}
 	}
 
-	for(int x = 0; x < blobCnt +2; x++) {
-		if (blobArray[x][0] > minBlobSize) {
-			blobList.insert(blobList.begin(), Blob(blobArray[x][0], blobArray[x][3], blobArray[x][4], blobArray[x][1], blobArray[x][2]));
+	int biggestlabel = 0;
+	int biggestLabelCount = 0;
+
+	for (int i = 0; i < labelIndex; i++) {
+		if (labelCount[i] > biggestLabelCount) {
+			biggestLabelCount = labelCount[i];
+			biggestlabel = i;
 		}
 	}
+
+	for (int y = 0; y < height; y++) {
+		for (int x = 0; x < width; x++) {
+			if (labelTable[labelMap[y][x]] == biggestlabel) {
+				//img.SetPixel(x, y, 255 << 24 | 0 << 16 | 0 << 8);
+			}
+		}
+	}
+
 	return blobList;
-
 }
