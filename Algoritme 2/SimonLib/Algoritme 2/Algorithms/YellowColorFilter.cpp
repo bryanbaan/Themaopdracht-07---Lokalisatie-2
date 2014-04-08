@@ -18,7 +18,7 @@ void YellowColorFilter::filterImage(ImageRGB & image) {
 			RGB2HSV(pixelRGB.red, pixelRGB.green, pixelRGB.blue, hue, saturation, value);
 
 			// If the color is yellow.
-			if (hue >= 30 && hue <= 58 && saturation >= 0.65) {
+			if (hue >= 30 && hue <= 55 && saturation >= 0.85) {
 				// If the color is within our yellow range, make the output pixel white.
 				pixelRGB.red = 255;
 				pixelRGB.green = 255;

@@ -80,6 +80,7 @@
   <ItemGroup>
     <ClCompile Include="Algorithms\BinarizeImage.cpp" />
     <ClCompile Include="Algorithms\GrayscaleImage.cpp" />
+    <ClCompile Include="Algorithms\HighPassFilter.cpp" />
     <ClCompile Include="Algorithms\YellowColorFilter.cpp" />
     <ClCompile Include="LicenseLocalizer.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -90,6 +91,7 @@
   <ItemGroup>
     <ClInclude Include="Algorithms\BinarizeImage.h" />
     <ClInclude Include="Algorithms\GrayscaleImage.h" />
+    <ClInclude Include="Algorithms\HighPassFilter.h" />
     <ClInclude Include="Algorithms\IntensityHistogram.h" />
     <ClInclude Include="Algorithms\YellowColorFilter.h" />
     <ClInclude Include="LicenseLocalizer.h" />
