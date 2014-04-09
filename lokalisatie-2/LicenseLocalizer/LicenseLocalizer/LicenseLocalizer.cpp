@@ -16,45 +16,64 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	string inputFile;
-	int test = 1;
+	string inputFile = "license_plate_";
 
-	Threshold th;
+	YellowColorFilter ycf;
 	BlobDetection bd;
+	BlobCheck bc;
 
-	inputFile = "license_plate_";
-	//stringstream ss;
-	for (test = 1; test <= 23; test++) {
-		string final_plate =  inputFile + to_string(test) + ".jpg";
-		Image inputImage(final_plate);
+	for (int test = 1; test <= 18; test++) {
+		string final_plate =  "c:\\test\\" + inputFile + to_string(test) + ".jpg";
+		string save_final_plate = "c:\\test\\changed_" + inputFile + to_string(test) + ".jpg";
 
-		clock_t start = clock();
-		th.doAlgorithm(inputImage);
-		inputImage.SaveImageToFile("th");
-		clock_t end = clock();
-		std::cout << "blob detection took: " << ((end - start) / (double)CLOCKS_PER_SEC) << "\n";
-		 std::vector<Blob> blobs = bd.Invoke(inputImage, (inputImage.GetHeight() * inputImage.GetWidth()) * 0.0015);
+		ImageLib::ImageRGB input (*ImageLib::loadImg(final_plate));
 
-		std::cout << "blobs found: " << blobs.size() << "\n";
+		ycf.filterImage(input);
 
-		 for (std::vector<Blob>::iterator it = blobs.begin(); it != blobs.end(); it++) {
-			 std::cout << "ratio: "<< it->getRatio() << "\n";
-			if (it->getRatio() >=2 && it->getRatio() <= 5) { 
-				for (int y = it->_smallestY; y < it->_biggestY; y++) {
-					for (int x = it->_smallestX; x < it->_biggestX; x++) {
-						inputImage.SetPixel(x, y, 255 << 24 | 0 << 16 | 0 << 8);
-					}
+		int minBlobSize = (input.width() * input.height()) * 0.0015;
+
+		std::vector<Blob> possibleBlobs = bd.Invoke(input, minBlobSize);
+
+		std::vector<Blob> licensePlates = bc.CheckIfBlobIsLicensePlate(possibleBlobs, input);
+
+		std::cout << "Image: " << inputFile << test << "\n";
+		std::cout << "Blobs found: " << possibleBlobs.size() << "\n\n";
+
+		//Output licenseplate info
+		for (std::vector<Blob>::iterator it = licensePlates.begin(); it != licensePlates.end(); ++it) {
+			//if (it->getRatio() >= 2 && it->getRatio() <= 5) {
+
+			std::vector<int> cornerPoints = it->getCornerPoints();
+
+
+			//std::cout << "Upper left corner: y=" << cornerPoints[0] << " x=" << cornerPoints[1] << "\n";
+			//std::cout << "Upper right corner: y=" << cornerPoints[2] << " x=" << cornerPoints[3] << "\n";
+			//std::cout << "Lower left corner: y=" << cornerPoints[4] << " x=" << cornerPoints[5] << "\n";
+			//std::cout << "Lower right corner: y=" << cornerPoints[6] << " x=" << cornerPoints[7] << "\n\'n";
+
+			int minY = cornerPoints[0];
+			int maxY = cornerPoints[4];
+
+			int minX = cornerPoints[1];
+			int maxX = cornerPoints[3];
+
+			for (int y = minY; y < maxY; y++) {
+				for (int x = minX; x < maxX; x++) {
+					input.at(x, y).red = 255;
+					input.at(x, y).green = 0;
+					input.at(x, y).blue = 0;
 				}
-				Point* cornerPoints = it->getCornerPoints();
-				std::cout << "Upper left corner: x=" << cornerPoints[0].getX() << " y=" << cornerPoints[0].getY() << "\n";
-				std::cout << "Upper right corner: x=" << cornerPoints[1].getX() << " y=" << cornerPoints[1].getY() << "\n";
-				std::cout << "Lower left corner: x=" << cornerPoints[2].getX() << " y=" << cornerPoints[2].getY() << "\n";
-				std::cout << "Lower right corner: x=" << cornerPoints[3].getX() << " y=" << cornerPoints[3].getY() << "\n";
 			}
-		} 
-			
-		inputImage.SaveImageToFile("v1");	
+		}
+		//}
+
+		ImageLib::saveImg(input, save_final_plate);
+		
+		//Clear vector memory
+		std::vector<Blob>().swap(possibleBlobs); 
+		std::vector<Blob>().swap(licensePlates);
 	}
+	std::cout << "Program finished";
 	std::cin.get();
 	return 0;
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>imagelib</id>
+    <version>0.6</version>
+    <title>THO7 ImageLib</title>
+    <authors>Simon Voordouw</authors>
+    <owners>Simon Voordouw</owners>
+    <licenseUrl>http://license_url_here_or_delete_this_line/</licenseUrl>
+    <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Themopdracht 7 image library</description>
+    <summary>Themopdracht 7 image library</summary>
+    <releaseNotes>x86 support</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>nativepackage</tags>
+  </metadata>
+</package>

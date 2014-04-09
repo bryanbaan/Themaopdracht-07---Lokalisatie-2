@@ -3,24 +3,23 @@
 *	Author: Mike Schaap
 */
 
-
 #include "stdafx.h"
 #include "BlobDetection.h"
-#include <iostream>
+
 
 BlobDetection::BlobDetection() {
 }
 
-std::vector<Blob> BlobDetection::Invoke(Image &img, int minBlobSize) {
+std::vector<Blob> BlobDetection::Invoke(ImageLib::ImageRGB & image, int minBlobSize) {
 
 	//Get the image height
-	int height = img.GetHeight();
+	int height = image.height();
 
 	//Get the image width
-	int width = img.GetWidth();
+	int width = image.width();
 	
 	//Remember on which lines we found a (part) blob, so we don't have to check every line again.
-	boolean blobFoundOnRow = false;
+	bool blobFoundOnRow = false;
 
 	//Save all the lines on which we found a (part) blob
 	std::vector<int> blobRows;
@@ -59,7 +58,7 @@ std::vector<Blob> BlobDetection::Invoke(Image &img, int minBlobSize) {
 		for (int x = 1; x < tmpWidth; x++)
 		{
 			//Only check blue. Saves time and if blue = 0 it's black, if blue is 255 it's white. Simple as that
-			if (img.GetPixelRed(x, y) == 255) 
+			if (image.at(x, y).red == 255)
 			{
 				if (blobFoundOnRow == false) blobFoundOnRow = true;
 				labelA = labelMap[y][x - 1];
@@ -100,7 +99,7 @@ std::vector<Blob> BlobDetection::Invoke(Image &img, int minBlobSize) {
 		}
 	}
 
-	//Vector for assiging which labels belong to which blob
+	//Vector for assinging which labels belong to which blob
 	std::vector<int> labelToBlob(labelIndex);
 
 	int blobCount = 0;

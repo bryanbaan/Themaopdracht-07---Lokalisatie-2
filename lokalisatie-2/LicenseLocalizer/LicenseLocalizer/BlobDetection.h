@@ -6,25 +6,20 @@
 #ifndef BlobDetection_H
 #define BlobDetection_H
 
-#include <string>
-#include <iostream>
-
 #include "Blob.h"
-#include <list>
-
 #include "Image.h"
 
-#include "Point.h"
-
-//Shift values
+#include <string>
+#include <iostream>
+#include <list>
+#include <ImageLib.h>
 
 class BlobDetection {
 private:
-	
 
 public:
 	BlobDetection();
-	std::vector<Blob> Invoke(Image &img, int minBlobSize);
+	std::vector<Blob> Invoke(ImageLib::ImageRGB & image, int minBlobSize);
 };
 
 #endif

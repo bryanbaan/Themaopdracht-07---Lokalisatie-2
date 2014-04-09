@@ -5,11 +5,13 @@
 
 #ifndef BlobCheck_H
 #define BlobCheck_H
-#include "Image.h"
+
 #include <iostream>
-#include <list>
+#include <vector>
+#include <ImageLib.h>
 #include "Blob.h"
-#include "Point.h"
+
+
 
 class BlobCheck {
 private:
@@ -17,7 +19,7 @@ private:
 public:
 	BlobCheck();
 	~BlobCheck();
-	std::vector<Blob> CheckIfBlobIsLicensePlate(std::vector<Blob> &blobobjects, Image &sourceImage);
+	std::vector<Blob> CheckIfBlobIsLicensePlate(std::vector<Blob> &blobobjects, ImageLib::ImageRGB &image);
 };
 
 #endif

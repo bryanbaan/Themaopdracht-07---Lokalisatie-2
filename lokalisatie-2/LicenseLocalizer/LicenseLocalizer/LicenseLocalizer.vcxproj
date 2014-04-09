@@ -83,28 +83,27 @@
     <ClInclude Include="Blob.h" />
     <ClInclude Include="BlobCheck.h" />
     <ClInclude Include="BlobDetection.h" />
-    <ClInclude Include="Image.h" />
     <ClInclude Include="LicenseLocalizer.h" />
-    <ClInclude Include="MedianDifferenceAlgorithm.h" />
-    <ClInclude Include="Point.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Threshold.h" />
+    <ClInclude Include="YellowColorFilter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BlobCheck.cpp" />
     <ClCompile Include="BlobDetection.cpp" />
     <ClCompile Include="Blob.cpp" />
-    <ClCompile Include="Image.cpp" />
     <ClCompile Include="LicenseLocalizer.cpp" />
-    <ClCompile Include="Point.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Threshold.cpp" />
+    <ClCompile Include="YellowColorFilter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\imagelib.0.6\build\native\imagelib.targets" Condition="Exists('..\packages\imagelib.0.6\build\native\imagelib.targets')" />
   </ImportGroup>
 </Project>

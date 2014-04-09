@@ -30,22 +30,13 @@
     <ClInclude Include="Blob.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Image.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="LicenseLocalizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MedianDifferenceAlgorithm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Threshold.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BlobCheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="YellowColorFilter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,17 +53,14 @@
     <ClCompile Include="Blob.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Image.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Threshold.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="BlobCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="YellowColorFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
