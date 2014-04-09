@@ -15,9 +15,9 @@ LicensePosition LicenseLocalizer::getLicensePlatePosition(ImageRGB & image) {
 	imageBinarizer.binarizeImage(image);
 
 	IntensityHistogram intensityHistogram;
-	intensityHistogram.getLicensePosition(image, true);
+	LicensePosition pos = intensityHistogram.getLicensePosition(image, true);
 
 	saveImg(image, "output.jpg");
 
-	return LicensePosition(0, 0, 0, 0);
+	return pos;
 }

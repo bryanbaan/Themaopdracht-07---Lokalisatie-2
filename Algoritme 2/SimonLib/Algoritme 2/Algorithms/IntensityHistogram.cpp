@@ -9,6 +9,12 @@ LicensePosition IntensityHistogram::getLicensePosition(ImageRGB & image, bool ge
 	int topLeftX;
 	int topLeftY;
 
+	int topRightX;
+	int topRightY;
+
+	int bottomLeftX;
+	int bottomLeftY;
+
 	int bottomRightX;
 	int bottomRightY;
 
@@ -29,39 +35,10 @@ LicensePosition IntensityHistogram::getLicensePosition(ImageRGB & image, bool ge
 		}
 	}
 
-
-	int distance = 10;
-
-	int max = 0;
-	int maxPosition = 0;
 	int minPosLeft = 0;
 	int minPosRight = 0;
-	int min = 30;
 
-	for (int i = 0; i < size; i++) {
-		if (values[i] > max) {
-			max = values[i];
-			maxPosition = i;
-		}
-
-		if (values[i] < min) {
-			min = values[i];
-		}
-	}
-
-	for (int i = maxPosition; i > distance; i--) {
-		if (values[i] == min) {
-			minPosLeft = i;
-			break;
-		}
-	}
-
-	for (int i = maxPosition; i < (height - distance); i++) {
-		if (values[i] == min) {
-			minPosRight = i;
-			break;
-		}
-	}
+	findPeakRange(minPosLeft, minPosRight, values, size);
 
 	int y = minPosLeft;
 	for (int x = 0; x < width; x++) {
@@ -82,6 +59,8 @@ LicensePosition IntensityHistogram::getLicensePosition(ImageRGB & image, bool ge
 	}
 
 	topLeftY = minPosLeft;
+	topRightY = minPosLeft;
+	bottomLeftY = minPosRight;
 	bottomRightY = minPosRight;
 
 	delete[] values;
@@ -102,34 +81,7 @@ LicensePosition IntensityHistogram::getLicensePosition(ImageRGB & image, bool ge
 		}
 	}
 
-	min = 30;
-	int minValue = 0;
-
-	max = 0;
-	for (int i = 0; i < size; i++) {
-		if (values[i] > max) {
-			max = values[i];
-			maxPosition = i;
-		}
-
-		if (values[i] < min) {
-			min = values[i];
-		}
-	}
-
-	for (int i = maxPosition; i > distance; i--) {
-		if (values[i] == min) {
-			minPosLeft = i;
-			break;
-		}
-	}
-	
-	for (int i = maxPosition; i < (width - distance); i++) {
-		if (values[i] == min) {
-			minPosRight = i;
-			break;
-		}
-	}
+	findPeakRange(minPosLeft, minPosRight, values, size);
 	
 	int x = minPosLeft;
 	for (int y = 0; y < height; y++) {
@@ -150,9 +102,11 @@ LicensePosition IntensityHistogram::getLicensePosition(ImageRGB & image, bool ge
 	}
 
 	topLeftX = minPosLeft;
+	topRightX = minPosRight;
+	bottomLeftX = minPosLeft;
 	bottomRightX = minPosRight;
 
-	return LicensePosition(topLeftX, topLeftY, bottomRightX, bottomRightY);
+	return LicensePosition(topLeftX, topLeftY, topRightX, topRightY, bottomLeftX, bottomLeftY, bottomRightX, bottomRightY);
 }
 
 void IntensityHistogram::findPeakRange(int &leftSide, int &rightSide, int * values, int histogramSize) {
