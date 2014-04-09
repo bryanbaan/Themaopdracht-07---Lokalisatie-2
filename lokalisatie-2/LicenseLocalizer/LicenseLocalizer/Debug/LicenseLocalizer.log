@@ -1,28 +1,18 @@
-﻿Build started 08/04/2014 13:53:39.
-     1>Project "C:\Users\Chanan\Documents\GitHub\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" on node 2 (Build target(s)).
+﻿Build started 4/8/2014 11:03:38 PM.
+     1>Project "E:\School\vision_v2\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\LicenseLocalizer.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BlobCheck.cpp BlobDetection.cpp Blob.cpp Image.cpp LicenseLocalizer.cpp Point.cpp Threshold.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LicenseLocalizer.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Threshold.cpp
+     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
          Threshold.cpp
-     1>c:\users\chanan\documents\github\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(65): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\chanan\documents\github\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(91): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\chanan\documents\github\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(96): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\chanan\documents\github\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(99): warning C4305: '=' : truncation from 'unsigned int' to 'float'
-     1>c:\users\chanan\documents\github\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(106): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\chanan\documents\github\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(110): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\chanan\documents\github\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(113): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-         Point.cpp
-         LicenseLocalizer.cpp
-         Image.cpp
-         Blob.cpp
-         BlobDetection.cpp
-         BlobCheck.cpp
-     1>c:\users\chanan\documents\github\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\blobcheck.cpp(47): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\chanan\documents\github\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\blobcheck.cpp(52): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-         Generating Code...
+     1>e:\school\vision_v2\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(68): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>e:\school\vision_v2\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(94): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school\vision_v2\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(99): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school\vision_v2\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(102): warning C4305: '=' : truncation from 'unsigned int' to 'float'
+     1>e:\school\vision_v2\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(109): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school\vision_v2\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(113): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school\vision_v2\themaopdracht-07---lokalisatie-2\lokalisatie-2\licenselocalizer\licenselocalizer\threshold.cpp(116): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
        Link:
-         D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chanan\Documents\GitHub\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Chanan\Documents\GitHub\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chanan\Documents\GitHub\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.lib" /MACHINE:X86 Debug\BlobCheck.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\School\vision_v2\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\School\vision_v2\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\School\vision_v2\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.lib" /MACHINE:X86 Debug\BlobCheck.obj
          Debug\BlobDetection.obj
          Debug\Blob.obj
          Debug\Image.obj
@@ -30,9 +20,9 @@
          Debug\Point.obj
          Debug\stdafx.obj
          Debug\Threshold.obj
-         LicenseLocalizer.vcxproj -> C:\Users\Chanan\Documents\GitHub\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.exe
-     1>Done Building Project "C:\Users\Chanan\Documents\GitHub\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" (Build target(s)).
+         LicenseLocalizer.vcxproj -> E:\School\vision_v2\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Debug\LicenseLocalizer.exe
+     1>Done Building Project "E:\School\vision_v2\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.88
+Time Elapsed 00:00:01.94

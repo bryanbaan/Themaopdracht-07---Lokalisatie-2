@@ -26,7 +26,7 @@ public:
 
 	int getGroundSurface(){return (getWidth() * getHeight());};
 	int getRatio(){return (getWidth() / getHeight());};
-	int getActualBlobPercentage(){ return (_pixelCount / getGroundSurface() * 100);};
+	double getActualBlobPercentage(){ return (_pixelCount / getGroundSurface() * 100);};
 	int getMass(){return _pixelCount;};
 
 	Point* getCornerPoints();

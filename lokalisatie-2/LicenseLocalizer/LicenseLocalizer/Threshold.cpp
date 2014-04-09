@@ -7,6 +7,8 @@
 #include "stdafx.h"
 #include "Threshold.h"
 
+using namespace std;
+
 
 Threshold::Threshold() {
 
@@ -65,7 +67,7 @@ void Threshold::doAlgorithm(Image &image) {
 		RGB2HSV(r, g, b, hue, saturtation, value);
 
 		// If the color is yellow.
-		if (hue >= 30 && hue <= 58 && saturtation >= 0.65) {
+		if (hue >= 30 && hue <= 60 && saturtation >= 0.60) {
 			// If the color is within our yellow range, make the output pixel white.
 			destDataPtr[i] = ~0;
 		} else {
@@ -121,4 +123,3 @@ void Threshold::RGB2HSV(float r, float g, float b, float & h, float & s, float &
 		h += 360.0;
 	}
 }
-
