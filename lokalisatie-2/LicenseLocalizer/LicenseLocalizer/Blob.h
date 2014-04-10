@@ -11,7 +11,7 @@
 class Blob {
 
 private:
-	int _label;
+	int _id;
 	int _pixelCount;
 	int _smallestY;
 	int _biggestY;
@@ -19,8 +19,10 @@ private:
 	int _smallestX;
 	int _biggestX;
 
+	std::vector<int> _cornerPoints;
+
 public:
-	Blob(int label, int mass, int minY, int maxY, int minX, int maxX);
+	Blob(int id, int mass, int minY, int maxY, int minX, int maxX);
 
 	int getGroundSurface(){return (getWidth() * getHeight());};
 	double getRatio(){return (double((getWidth()+1)) / double((getHeight()+1)));};
@@ -29,9 +31,16 @@ public:
 	int getWidth(){return (_biggestX - _smallestX);};
 	int getHeight(){return (_biggestY - _smallestY);};
 
-	int getLabel(){ return _label; };
+	int getSmallestY() { return _smallestY; };
+	int getSmallestX() { return _smallestX; };
 
-	std::vector<int> getCornerPoints(){ return std::vector<int>{_smallestY, _smallestX, _smallestY, _biggestX, _biggestY, _smallestX, _biggestY, _biggestX}; };
+	int getBiggestY() { return _biggestY; };
+	int getBiggestX() { return _biggestX; };
+
+	int getId(){ return _id; };
+
+	void setCornerPoints(std::vector<int> points) { _cornerPoints = points; };
+	std::vector<int> getCornerPoints(){ return _cornerPoints; };
 
 };
 

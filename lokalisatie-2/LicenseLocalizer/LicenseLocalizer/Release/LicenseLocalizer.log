@@ -1,20 +1,76 @@
-﻿Build started 4/10/2014 12:23:02 AM.
-     1>Project "E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/include/" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\LicenseLocalizer.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BlobDetection.cpp LicenseLocalizer.cpp
-         BlobDetection.cpp
-         LicenseLocalizer.cpp
-     1>LicenseLocalizer.cpp(33): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\LicenseLocalizer.exe" /INCREMENTAL:NO /NOLOGO "E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\zlib.lib" "E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\libpng.lib" "E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\jpeg.lib" "E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\ImageLib.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\LicenseLocalizer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\LicenseLocalizer.lib" /MACHINE:X86 /PROFILE /SAFESEH Release\BlobCheck.obj
-         Release\BlobDetection.obj
-         Release\Blob.obj
-         Release\LicenseLocalizer.obj
-         Release\stdafx.obj
-         Release\YellowColorFilter.obj
-     1>LINK : fatal error LNK1104: cannot open file 'E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\LicenseLocalizer.exe'
-     1>Done Building Project "E:\vision\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" (Build target(s)) -- FAILED.
+﻿Build started 4/10/2014 12:04:06 PM.
+Project "C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" on node 2 (Build target(s)).
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/include/" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\LicenseLocalizer.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BlobCheck.cpp
+  BlobCheck.cpp
+Link:
+  C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\LicenseLocalizer.exe" /INCREMENTAL:NO /NOLOGO "C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\zlib.lib" "C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\libpng.lib" "C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\jpeg.lib" "C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\ImageLib.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\LicenseLocalizer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\LicenseLocalizer.lib" /MACHINE:X86 /PROFILE /SAFESEH Release\BlobCheck.obj
+  Release\BlobDetection.obj
+  Release\Blob.obj
+  Release\LicenseLocalizer.obj
+  Release\stdafx.obj
+  Release\YellowColorFilter.obj
+  Generating code
+  Finished generating code
+jpeg.lib(jerror.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jerror.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcapimin.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcapimin.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdapimin.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdapimin.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdatadst.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdatadst.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdatasrc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdatasrc.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcparam.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcparam.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcapistd.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcapistd.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdapistd.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdapistd.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcomapi.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcomapi.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jutils.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jutils.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcmarker.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcmarker.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jmemmgr.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jmemmgr.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdmarker.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdmarker.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdinput.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdinput.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcinit.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcinit.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdmaster.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdmaster.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jmemnobs.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jmemnobs.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jccolor.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jccolor.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcarith.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcarith.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcmainct.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcmainct.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcmaster.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcmaster.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jccoefct.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jccoefct.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcprepct.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcprepct.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcdctmgr.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcdctmgr.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jcsample.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jcsample.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jchuff.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jchuff.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdhuff.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdhuff.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jquant1.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jquant1.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jddctmgr.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jddctmgr.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdsample.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdsample.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdarith.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdarith.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdcolor.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdcolor.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdcoefct.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdcoefct.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jquant2.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jquant2.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdmerge.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdmerge.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdmainct.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdmainct.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jdpostct.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jdpostct.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jaricom.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jaricom.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jfdctint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jfdctint.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jfdctflt.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jfdctflt.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jfdctfst.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jfdctfst.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jidctint.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jidctint.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jidctflt.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jidctflt.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+jpeg.lib(jidctfst.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'jpeg.lib(jidctfst.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+zlib.lib(adler32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlib.lib(adler32.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\zlib.pdb'; linking object as if no debug info
+zlib.lib(crc32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlib.lib(crc32.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\zlib.pdb'; linking object as if no debug info
+zlib.lib(deflate.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlib.lib(deflate.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\zlib.pdb'; linking object as if no debug info
+zlib.lib(inflate.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlib.lib(inflate.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\zlib.pdb'; linking object as if no debug info
+zlib.lib(inftrees.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlib.lib(inftrees.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\zlib.pdb'; linking object as if no debug info
+zlib.lib(inffast.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlib.lib(inffast.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\zlib.pdb'; linking object as if no debug info
+zlib.lib(trees.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlib.lib(trees.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\zlib.pdb'; linking object as if no debug info
+zlib.lib(zutil.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlib.lib(zutil.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\zlib.pdb'; linking object as if no debug info
+ImageLib.lib(Image.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'ImageLib.lib(Image.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+ImageLib.lib(ImageGray.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'ImageLib.lib(ImageGray.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+ImageLib.lib(ImageLoader.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'ImageLib.lib(ImageLoader.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+ImageLib.lib(ImageRGB.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'ImageLib.lib(ImageRGB.obj)' or at 'C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\vc120.pdb'; linking object as if no debug info
+  LicenseLocalizer.vcxproj -> C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\Release\LicenseLocalizer.exe
+Done Building Project "C:\vis3\Themaopdracht-07---Lokalisatie-2\lokalisatie-2\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:02.83
+Time Elapsed 00:00:17.45

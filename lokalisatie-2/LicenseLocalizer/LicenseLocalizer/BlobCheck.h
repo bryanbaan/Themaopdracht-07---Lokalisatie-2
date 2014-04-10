@@ -19,7 +19,7 @@ private:
 public:
 	BlobCheck();
 	~BlobCheck();
-	std::vector<Blob> CheckIfBlobIsLicensePlate(std::vector<Blob> &blobobjects, ImageLib::ImageRGB &image);
+	std::vector<Blob> CheckIfBlobIsLicensePlate(std::vector<Blob> &blobobjects, std::vector< std::vector<int> > blobMap);
 };
 
 #endif

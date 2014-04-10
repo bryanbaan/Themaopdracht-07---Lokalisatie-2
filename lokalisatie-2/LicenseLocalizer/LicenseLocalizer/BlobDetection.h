@@ -8,6 +8,7 @@
 
 #include "Blob.h"
 #include "Image.h"
+#include "BlobCheck.h"
 
 #include <string>
 #include <iostream>
