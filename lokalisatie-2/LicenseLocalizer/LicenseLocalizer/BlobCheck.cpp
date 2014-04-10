@@ -32,7 +32,7 @@ std::vector<Blob> BlobCheck::CheckIfBlobIsLicensePlate(std::vector<Blob> &blobob
 			int bigY = it->getBiggestY();
 			int bigX = it->getBiggestX();
 
-			int y = (bigY - smallY) + smallY;
+			int y = ((bigY- smallY)/2) + smallY;
 
 			for (int x = smallX; x < bigX; x++){
 				if (blobMap[y][x] != lastBlobId){
@@ -45,7 +45,7 @@ std::vector<Blob> BlobCheck::CheckIfBlobIsLicensePlate(std::vector<Blob> &blobob
 		}
 	}
 
-	std::cout << "validBlobs: " << validBlobs.size() << std::endl;
+	//std::cout << "validBlobs: " << validBlobs.size() << std::endl;
 
 	for (std::vector<Blob>::iterator it = validBlobs.begin(); it != validBlobs.end(); it++) {
 

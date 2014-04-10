@@ -21,19 +21,23 @@ int _tmain(int argc, _TCHAR* argv[])
 	YellowColorFilter ycf;
 	BlobDetection bd;
 	BlobCheck bc;
-
-	for (int test = 1; test <= 18; test++) {
+	//clock_t startProgram = clock();
+	for (int test = 1; test <= 21; test++) {
 		string final_plate =  "c:\\test\\" + inputFile + to_string(test) + ".jpg";
 		string save_final_plate = "c:\\test\\changed_" + inputFile + to_string(test) + ".bmp";
 
 		ImageLib::ImageRGB input (*ImageLib::loadImg(final_plate));
-
+		
+		clock_t start = clock();
+		
 		ycf.filterImage(input);
 
 		int minBlobSize = (input.width() * input.height()) * 0.0015;
 
 		std::vector<Blob> possibleBlobs = bd.Invoke(input, minBlobSize);
 
+		clock_t end = clock();
+		std::cout << "Runtime image: " << (1000 * (end - start) / CLOCKS_PER_SEC) << std::endl;
 		for (std::vector<Blob>::iterator it = possibleBlobs.begin(); it != possibleBlobs.end(); ++it) {
 			std::vector<int> points = it->getCornerPoints();
 			input.at(points[0], points[1]).red = 255;
@@ -59,6 +63,9 @@ int _tmain(int argc, _TCHAR* argv[])
 		std::vector<Blob>().swap(possibleBlobs); 
 		//std::vector<Blob>().swap(licensePlates);
 	}
+	//clock_t endProgram = clock();
+	//std::cout << "Runtime program: " << (1000 * (endProgram - startProgram) / CLOCKS_PER_SEC) << std::endl;
+
 	std::cout << "Program finished";
 	std::cin.get();
 	return 0;
