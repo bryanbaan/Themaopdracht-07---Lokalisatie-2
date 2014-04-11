@@ -34,7 +34,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 			ycf.filterImage(input);
 
-			int minBlobSize = (input.width() * input.height()) * 0.0015;
+			int minBlobSize = int((input.width() * input.height()) * 0.0015);
 
 			std::vector<Blob> possibleBlobs = bd.Invoke(input, minBlobSize);
 
