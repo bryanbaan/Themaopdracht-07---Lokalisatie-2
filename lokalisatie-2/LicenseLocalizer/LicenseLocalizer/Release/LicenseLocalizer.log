@@ -1,9 +1,10 @@
-﻿Build started 10/04/2014 12:52:57.
+﻿Build started 11/04/2014 19:54:58.
      1>Project "C:\Users\Chanan\Desktop\LicenseLocalizer\LicenseLocalizer\LicenseLocalizer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Chanan\Desktop\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/include/ /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\LicenseLocalizer.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt LicenseLocalizer.cpp
+         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Chanan\Desktop\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/include/ /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\LicenseLocalizer.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BlobCheck.cpp LicenseLocalizer.cpp
+         BlobCheck.cpp
          LicenseLocalizer.cpp
-     1>LicenseLocalizer.cpp(35): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>LicenseLocalizer.cpp(37): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
        Link:
          D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chanan\Desktop\LicenseLocalizer\Release\LicenseLocalizer.exe" /INCREMENTAL:NO /NOLOGO C:\Users\Chanan\Desktop\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\zlib.lib C:\Users\Chanan\Desktop\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\libpng.lib C:\Users\Chanan\Desktop\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\jpeg.lib C:\Users\Chanan\Desktop\LicenseLocalizer\packages\imagelib.0.6\build\native\../..//build/native/lib/Win32\Release\ImageLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Chanan\Desktop\LicenseLocalizer\Release\LicenseLocalizer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chanan\Desktop\LicenseLocalizer\Release\LicenseLocalizer.lib" /MACHINE:X86 /PROFILE /SAFESEH Release\BlobCheck.obj
          Release\BlobDetection.obj
@@ -74,4 +75,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.73
+Time Elapsed 00:00:03.19

@@ -45,7 +45,7 @@ std::vector<Blob> BlobCheck::CheckIfBlobIsLicensePlate(std::vector<Blob> &blobob
 		}
 	}
 
-	//std::cout << "validBlobs: " << validBlobs.size() << std::endl;
+	std::cout << "validBlobs: " << validBlobs.size() << std::endl;
 
 	for (std::vector<Blob>::iterator it = validBlobs.begin(); it != validBlobs.end(); it++) {
 
@@ -54,15 +54,19 @@ std::vector<Blob> BlobCheck::CheckIfBlobIsLicensePlate(std::vector<Blob> &blobob
 
 		bool labelFound = false;
 
+		//topleft corner
 		int cornerTLY = -1;
 		int cornerTLX = -1;
 
+		//topright corner
 		int cornerTRY = -1;
 		int cornerTRX = -1;
 
+		//bottomleft corner
 		int cornerBLY = -1;
 		int cornerBLX = -1;
 
+		//bottomright corner
 		int cornerBRY = -1;
 		int cornerBRX = -1;
 
