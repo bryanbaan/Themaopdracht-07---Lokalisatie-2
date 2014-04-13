@@ -105,6 +105,8 @@ LicensePosition IntensityHistogram::getLicensePosition(ImageRGB & image, bool ge
 	topRightX = minPosRight;
 	bottomLeftX = minPosLeft;
 	bottomRightX = minPosRight;
+	
+	delete[] values;
 
 	return LicensePosition(topLeftX, topLeftY, topRightX, topRightY, bottomLeftX, bottomLeftY, bottomRightX, bottomRightY);
 }
