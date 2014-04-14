@@ -7,8 +7,20 @@
 
 using namespace ImageLib;
 
+//! YellowColorFilter class
+//
+//! This class is able to filter an image on the yellow color.
+//!
+//! Team: Localization
+//! Author(s): Mitchell Werensteijn & Yusuf Syakur
+//! Version: 1.0
 class YellowColorFilter {
 public:
+	//! Filter an image on yellow.
+	//
+	//! Filter image on yellow.
+	//! 
+	//! /param image is the image that will be filtered.
 	void filterImage(ImageRGB & image);
 
 	// Function to convert a RGB value to HSV format.
